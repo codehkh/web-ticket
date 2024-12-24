@@ -1,25 +1,35 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { FlatCompat } from '@eslint/eslintrc'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-});
+})
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript",'airbnb', // Airbnb의 JavaScript 스타일 규칙
-    'airbnb/hooks', // Airbnb의 React hooks 스타일 규칙
-    
-    // Prettier와 충돌을 방지하려면 eslint-config-prettier를 추가
-    'plugin:prettier/recommended', // Prettier 설정
-    
-    // TypeScript용 설정
-    'plugin:@typescript-eslint/recommended') // TypeScript 관련 규칙),
-    // Airbnb 설정 추가
-    
-];
+  ...compat.config({
+    ignorePatterns: ['node_modules/'], // eslint 미적용될 폴더나 파일 명시
+    extends: [
+      'next/core-web-vitals',
+      'next/typescript',
+      'airbnb', // Airbnb 설정 추가
+      'airbnb/hooks', // Airbnb의 React hooks 스타일 규칙
 
-export default eslintConfig;
+      // Prettier와 충돌을 방지하려면 eslint-config-prettier를 추가
+      'plugin:prettier/recommended', // Prettier 설정
+      "prettier",
+      // TypeScript용 설정
+      'plugin:@typescript-eslint/recommended',
+    ],
+    rules: {
+      'react/react-in-jsx-scope': 'off', // react 17부턴 import 필요 없음
+      'react/jsx-filename-extension': ['warn', { extensions: ['.ts', '.tsx'] }], // 경고표시, 파일 확장자를 .ts나 .tsx 모두 허용
+      'no-useless-catch': 'off', // 불필요한 catch 못쓰게 하는 기능 off
+    },
+  }),
+]
+
+export default eslintConfig
