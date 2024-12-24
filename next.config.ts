@@ -1,10 +1,10 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */  
-  compiler: {               // 추가
-    styledComponents: true, // 추가
+  /* config options here */
+  compiler: {
+    styledComponents: true, // ssr 에서 css 적용
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
