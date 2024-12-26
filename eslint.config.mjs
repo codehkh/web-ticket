@@ -29,6 +29,16 @@ const eslintConfig = [
       'react/jsx-filename-extension': ['warn', { extensions: ['.ts', '.tsx'] }], // 경고표시, 파일 확장자를 .ts나 .tsx 모두 허용
       'no-useless-catch': 'off', // 불필요한 catch 못쓰게 하는 기능 off
       'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      ],
     },
   }),
 ]
