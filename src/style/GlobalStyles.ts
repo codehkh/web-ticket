@@ -1,5 +1,3 @@
-'use client'
-
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -8,7 +6,6 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-
 
         &::-webkit-scrollbar { 
             width: 8px;
@@ -30,17 +27,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.6rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-    }
-
-    #root {
         width: 100%;
+        height: 100%;
     }
 
-    .App {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-    }
 `
 
 export default GlobalStyle

@@ -39,6 +39,7 @@ const eslintConfig = [
           tsx: 'never',
         },
       ],
+      'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }], // react fragment 사용 가능a
     },
   }),
 ]

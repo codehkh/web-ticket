@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import GlobalStyle from '@/style/GlobalStyles'
-import StyledComponentsRegistry from './registry'
+import StyleRegistry from '@/style/StyleRegistry'
 
 // const geistSans = Geist({
 //   variable: '--font-geist-sans',
@@ -25,10 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>
-          <GlobalStyle />
-          {children}
-        </StyledComponentsRegistry>
+        <StyleRegistry>{children}</StyleRegistry>
       </body>
     </html>
   )
