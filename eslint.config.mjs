@@ -28,7 +28,11 @@ const eslintConfig = [
       'react/react-in-jsx-scope': 'off', // react 17부턴 import 필요 없음
       'react/jsx-filename-extension': ['warn', { extensions: ['.ts', '.tsx'] }], // 경고표시, 파일 확장자를 .ts나 .tsx 모두 허용
       'no-useless-catch': 'off', // 불필요한 catch 못쓰게 하는 기능 off
-      'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      'import/no-extraneous-dependencies': [
+        'error',
+        'ignorePackages',
+        { devDependencies: true },
+      ],
       'import/extensions': [
         'error',
         'ignorePackages',
