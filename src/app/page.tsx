@@ -1,3 +1,20 @@
+'use client'
+
+import { collection, addDoc } from 'firebase/firestore'
+import firestore from '@/firebase/FireStore'
+
 export default function Home() {
-  return <div data-testid="test">test</div>
+  const onClickUpLoadButton = async () => {
+    await addDoc(collection(firestore, 'users'), {
+      first: 'Ada',
+      last: 'Lovelace',
+      born: 1815,
+    })
+  }
+
+  return (
+    <div>
+      <button onClick={onClickUpLoadButton}>Ada Lovelace 등록</button>
+    </div>
+  )
 }
