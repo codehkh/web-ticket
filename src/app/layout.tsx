@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import StyleRegistry from '@/style/StyleRegistry'
+import DeviceProvider from '@/style/DeviceProvider'
 
 // const geistSans = Geist({
 //   variable: '--font-geist-sans',
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyleRegistry>{children}</StyleRegistry>
+        <DeviceProvider>{children}</DeviceProvider>
       </body>
     </html>
   )

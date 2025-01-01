@@ -1,9 +1,6 @@
-'use client'
-
 import { useServerInsertedHTML } from 'next/navigation'
 import React, { useState } from 'react'
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
-import GlobalStyle from '@/style/GlobalStyles'
 
 function StyleRegistry({ children }: { children: React.ReactNode }) {
   const [sheet] = useState(() => new ServerStyleSheet())
@@ -19,10 +16,7 @@ function StyleRegistry({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <StyleSheetManager sheet={sheet.instance}>
-      <GlobalStyle />
-      {children}
-    </StyleSheetManager>
+    <StyleSheetManager sheet={sheet.instance}>{children}</StyleSheetManager>
   )
 }
 

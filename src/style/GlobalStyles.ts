@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { ColorCSSVar } from '@/style/ColorCSSVar'
 
 const GlobalStyle = createGlobalStyle`
     * {        
@@ -22,6 +23,8 @@ const GlobalStyle = createGlobalStyle`
     }
     html {
         /** 폰트 설정 */
+        /** color 변수 설정 */
+        ${ColorCSSVar}
     }
     body {
         font-size: 1.6rem;
