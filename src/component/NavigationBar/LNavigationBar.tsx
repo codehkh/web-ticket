@@ -44,10 +44,10 @@ const LNavigationBar = () => {
 
       {/* Toggle Button */}
       <IconButton
-        sizeType={'small'}
-        buttonColorType={'icon'}
-        isActive={false}
-        buttonClickCallbackF={() => setIsOpen(!isOpen)}
+        $sizeType={'small'}
+        $buttonColorType={'icon'}
+        $isActive={false}
+        $buttonClickCallbackF={() => setIsOpen(!isOpen)}
       />
       <button
         onClick={() => setIsOpen(!isOpen)}

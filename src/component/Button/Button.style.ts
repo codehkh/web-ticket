@@ -65,10 +65,10 @@ const Button = styled.button<StyledButtonType>`
   }
 
   ${(props) =>
-    ButtonSizeVariants[props.sizeType as keyof typeof ButtonSizeVariants]}
+    ButtonSizeVariants[props.$sizeType as keyof typeof ButtonSizeVariants]}
   ${(props) =>
     ButtonColorTypeVariants[
-      props.buttonColorType as keyof typeof ButtonColorTypeVariants
+      props.$buttonColorType as keyof typeof ButtonColorTypeVariants
     ]}
 `
 
@@ -79,6 +79,6 @@ export const IconButton = styled(Button)`
   align-items: center;
   ${(props) =>
     IconButtonSizeVariants[
-      props.sizeType as keyof typeof IconButtonSizeVariants
+      props.$sizeType as keyof typeof IconButtonSizeVariants
     ]}
 `
