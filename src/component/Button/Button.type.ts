@@ -24,4 +24,4 @@ export type StyledButtonType = Pick<
   '$sizeType' | '$buttonColorType'
 >
 
-export type IconButtonPropsType = ButtonPropsType & { icon?: ReactElement }
+export type IconButtonPropsType = ButtonPropsType & { $icon: ReactElement }

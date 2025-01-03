@@ -1,6 +1,9 @@
 import { css } from 'styled-components'
 
 export const ColorCSSVar = css`
-  /* Gray */
+  /* Balck */
   --black-100: #1c1c1e;
+
+  /* Gray */
+  --gray-100: #8e8e931f;
 `
