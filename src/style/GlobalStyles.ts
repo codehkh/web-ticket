@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
 
+        width: 100%;
+        height: 100%;
+
         &::-webkit-scrollbar { 
             width: 8px;
             height: 8px;
@@ -30,8 +33,6 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.6rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        width: 100%;
-        height: 100%;
     }
 
 `
