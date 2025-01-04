@@ -9,13 +9,13 @@ export interface ButtonPropsType extends HTMLAttributes<HTMLButtonElement> {
   /** 버튼 배경, 테두리 설정 */
   $buttonColorType: buttonColorType
   /** disabled 여부 */
-  disabled?: boolean
+  $disabled?: boolean
   /** 버튼 활성화 여부 */
   $isActive: boolean
   /** 버튼 클릭 callback 함수 */
-  $buttonClickCallbackF: (e: MouseEvent<HTMLButtonElement>) => void
+  $onClickF: (e: MouseEvent<HTMLButtonElement>) => void
   /** 자식 노드 */
-  children?: ReactNode
+  $children?: ReactNode
 }
 
 /** 버튼 스타일 컴포넌트에서 사용하는 타입 */

@@ -6,17 +6,19 @@ import * as Style from '@/component/NavigationBar/LNavigationBar.style'
 import Rarrow from '@/assets/Rarrow.svg'
 
 const LNavigationBar = () => {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <Style.Container $isOepn={isOpen}>
-      <IconButton
-        $sizeType={'small'}
-        $buttonColorType={'icon'}
-        $isActive={false}
-        $buttonClickCallbackF={() => setIsOpen(!isOpen)}
-        $icon={<Rarrow />}
-      />
+      <Style.Button $isOepn={isOpen}>
+        <IconButton
+          $sizeType={'large'}
+          $buttonColorType={'icon'}
+          $isActive={true}
+          $onClickF={() => setIsOpen(!isOpen)}
+          $icon={<Rarrow />}
+        />
+      </Style.Button>
     </Style.Container>
   )
 }

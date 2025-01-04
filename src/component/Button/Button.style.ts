@@ -41,9 +41,8 @@ const IconButtonSizeVariants = {
 
 const ButtonColorTypeVariants = {
   icon: css`
-    background-color: var(--black-100);
+    background-color: transparent;
     @media (max-width: ${(props) => props.theme.mobile}) {
-      background-color: red;
     }
   `,
 }
@@ -53,7 +52,6 @@ const Button = styled.button<StyledButtonType>`
   all: unset;
   box-sizing: border-box;
 
-  border-radius: 8px;
   text-align: center;
 
   &:hover {
