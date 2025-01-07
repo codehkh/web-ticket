@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import IconButton from '@/component/Button/IconButton'
 
 import * as Style from '@/component/NavigationBar/LNavigationBar.style'
-
-import Rarrow from '@/assets/Rarrow.svg'
+import { RightIcon } from '@/assets'
 
 const LNavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +15,7 @@ const LNavigationBar = () => {
           $buttonColorType={'icon'}
           $isActive={true}
           $onClickF={() => setIsOpen(!isOpen)}
-          $icon={<Rarrow />}
+          $icon={<RightIcon />}
         />
       </Style.Button>
     </Style.Container>
