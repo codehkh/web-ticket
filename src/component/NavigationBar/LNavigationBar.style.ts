@@ -78,6 +78,10 @@ export const SubTitle = styled.span`
   font-weight: 400;
   line-height: 20.27px;
   text-align: left;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `
 
 export const Text = styled.div`
