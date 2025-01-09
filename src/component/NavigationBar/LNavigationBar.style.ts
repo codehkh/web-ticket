@@ -31,23 +31,91 @@ export const ProfileDiv = styled.div`
   justify-self: left;
 `
 
-export const AnalysisDiv = styled.div`
+export const AnalysisDiv = styled.div<{ $isOpen: boolean }>`
   width: 100%;
   height: 100%;
   display: grid;
 
   grid-template-areas:
     'icon title'
-    'icon subtitle'
-    'icon text'
-    'icon text'
-    'icon text';
-  grid-template-rows: repeat(5, fit-content(100%));
+    '. subtitle'
+    '. text';
+  grid-template-rows: 30px repeat(2, fit-content(100%));
   grid-template-columns: fit-content(100%) 1fr;
-  grid-column-gap: 11px;
-  grid-row-gap: 2px;
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
 
-  justify-self: left;
+  padding-right: 30px;
+
+  visibility: ${(props) => !props.$isOpen && 'hidden'};
+  opacity: ${(props) => (props.$isOpen ? 1 : 0)};
+
+  transition:
+    visibility 0.2s,
+    opacity 0.2s;
+`
+export const Icon = styled.div`
+  grid-area: icon;
+
+  padding: 2px;
+  justify-self: center;
+`
+
+export const Title = styled.span`
+  grid-area: title;
+
+  font-family: Noto Sans KR;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+`
+export const SubTitle = styled.span`
+  grid-area: subtitle;
+
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+`
+
+export const Text = styled.div`
+  grid-area: text;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`
+
+export const Row = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto; /* 좌측 라벨과 우측 숫자+단위 */
+  align-items: center; /* 세로 정렬 */
+
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: var(--gray-200);
+`
+
+export const Count = styled.span`
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20.27px;
+  color: var(--black-100);
+  &::after {
+    content: '장'; /* 단위 추가 */
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.27px;
+    margin-left: 4px; /* 숫자와 단위 간격 */
+    color: var(--gray-200);
+  }
 `
 
 export const KorName = styled.span<{ $isOpen: boolean }>`
