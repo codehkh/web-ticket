@@ -1,17 +1,13 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.div<{ $isOpen: boolean }>`
-  width: ${(prosp) => (prosp.$isOpen ? `240px` : `86px`)};
+  width: ${(props) => (props.$isOpen ? `320px` : `86px`)};
   height: 100%;
   transition: width 0.5s ease;
 
-  display: grid;
-  grid-template-areas:
-    'profile'
-    'follow'
-    'btn';
-  grid-template-rows: 100px 1fr fit-content(100%);
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
   align-items: center;
   justify-content: center;
@@ -20,16 +16,33 @@ export const Container = styled.div<{ $isOpen: boolean }>`
 `
 
 export const ProfileDiv = styled.div`
-  grid-area: profile;
-
   width: 100%;
-  height: 54px;
+  height: 70px;
   display: grid;
 
   grid-template-areas:
     'img name'
     'img id';
   grid-template-rows: repeat(2, fit-content(100%));
+  grid-template-columns: fit-content(100%) 1fr;
+  grid-column-gap: 11px;
+  grid-row-gap: 2px;
+
+  justify-self: left;
+`
+
+export const AnalysisDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+
+  grid-template-areas:
+    'icon title'
+    'icon subtitle'
+    'icon text'
+    'icon text'
+    'icon text';
+  grid-template-rows: repeat(5, fit-content(100%));
   grid-template-columns: fit-content(100%) 1fr;
   grid-column-gap: 11px;
   grid-row-gap: 2px;
@@ -76,9 +89,14 @@ export const Id = styled.span<{ $isOpen: boolean }>`
     opacity 0.2s;
 `
 
-export const Button = styled.div<{ $isOpen: boolean }>`
-  grid-area: btn;
-
+export const Line = styled.hr`
+  grid-area: line;
+  border: none;
+  width: 100%;
+  height: 0.8px;
+  background-color: #e5e5ea;
+`
+export const ButtonDiv = styled.div<{ $isOpen: boolean }>`
   width: fit-content;
   height: fit-content;
 

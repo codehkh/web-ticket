@@ -22,7 +22,10 @@ const LNavigationBar = () => {
         <Style.KorName $isOpen={isOpen}>이름</Style.KorName>
         <Style.Id $isOpen={isOpen}>id</Style.Id>
       </Style.ProfileDiv>
-      <Style.Button $isOpen={isOpen}>
+      <Style.Line />
+      <Style.AnalysisDiv></Style.AnalysisDiv>
+      <Style.Line />
+      <Style.ButtonDiv $isOpen={isOpen}>
         <IconButton
           $sizeType={'large'}
           $buttonColorType={'icon'}
@@ -30,7 +33,7 @@ const LNavigationBar = () => {
           $onClickF={() => setIsOpen(!isOpen)}
           $icon={<RightIcon />}
         />
-      </Style.Button>
+      </Style.ButtonDiv>
     </Style.Container>
   )
 }
