@@ -5,7 +5,8 @@ import Profile from '@/component/Profile/Profile'
 
 import * as Style from '@/component/NavigationBar/LNavigationBar.style'
 
-import { RightIcon, AnalysisIcon } from '@/assets'
+import { RightIcon, AnalysisIcon } from '@/assets/icons'
+import { ANALTEXT } from '@/assets/Datas/LNaviBar.text'
 import dummyprofile from '../../../public/img/dummyprofile.png'
 
 const LNavigationBar = () => {
@@ -29,17 +30,18 @@ const LNavigationBar = () => {
         <Style.Icon>
           <AnalysisIcon />
         </Style.Icon>
-        <Style.Title>분석</Style.Title>
+        <Style.Title>{ANALTEXT.TTITLE}</Style.Title>
         <Style.SubTitle>예시 text</Style.SubTitle>
         <Style.Text>
           <Style.Row>
-            총 티켓 <Style.Count>44</Style.Count>
+            {ANALTEXT.TOTAL}
+            <Style.Count>44</Style.Count>
           </Style.Row>
           <Style.Row>
-            올해 모은 티켓 <Style.Count>44</Style.Count>
+            {ANALTEXT.YEAR} <Style.Count>44</Style.Count>
           </Style.Row>
           <Style.Row>
-            이번달 모은 티켓 <Style.Count>44</Style.Count>
+            {ANALTEXT.MONTH} <Style.Count>44</Style.Count>
           </Style.Row>
         </Style.Text>
       </Style.AnalysisDiv>
