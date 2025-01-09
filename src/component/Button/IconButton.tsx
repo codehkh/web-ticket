@@ -1,9 +1,9 @@
-import { FC, MouseEvent } from 'react'
+import { MouseEvent } from 'react'
 
 import * as Style from '@/component/Button/Button.style'
-import { IconButtonPropsType } from './Button.type'
+import { IconButtonPropsType } from '@/component/Button/Button.type'
 
-export const IconButton: FC<IconButtonPropsType> = (props) => {
+const IconButton = (props: IconButtonPropsType) => {
   const { $icon, $onClickF, $isActive } = props
 
   const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {

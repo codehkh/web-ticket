@@ -1,11 +1,7 @@
 'use client'
 
-import LNavigationBar from '@/component/NavigationBar/LNavigationBar'
+import MainContainer from '@/container/MainContainer'
 
-export default function Home() {
-  return (
-    <div>
-      <LNavigationBar />
-    </div>
-  )
+export default function Page() {
+  return <MainContainer>calendar</MainContainer>
 }

@@ -6,4 +6,5 @@ export const ColorCSSVar = css`
 
   /* Gray */
   --gray-100: #8e8e931f;
+  --gray-200: #8e8e93;
 `
