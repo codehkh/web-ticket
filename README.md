@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# THE TICKET (web 버전)
 
-## Getting Started
+티켓 스크랩 및 개인 맞춤화된 작품 추천 서비스
+web 서비스를 위해 개발 중
 
-First, run the development server:
+## 개요
+**더 티켓(The Ticket)** 은 사용자에게 편리한 티켓 스크랩 및 기록 UI를 제공하고 개인 맞춤형 작품을 추천하는 서비스입니다.  
+사용자는 더 티켓을 통해 자신의 문화생활을 기록하고 친구들과 이를 공유하며 소통할 수 있습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 기술 스택
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Frontend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** – 실시간 데이터 반영 성능 강화, SSR 렌더링
+- **TypeScript** – 정적 타이핑을 통한 안정성 확보
+- **Zustand** – 번들이 작고 기능이 Mobx랑 크게 다르지 않음
+- **Styled Components** – CSS-in-JS 방식의 스타일 관리,생태계 구축 잘 되어 있음
+- **Axios** – API 요청/응답 및 에러 핸들링을 위한 HTTP 클라이언트
+- **Lodash** – 유틸리티 함수 활용을 위한 JavaScript 라이브러리
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 테스트
 
-## Learn More
+- **Jest** – 단위 테스트 프레임워크
 
-To learn more about Next.js, take a look at the following resources:
+### 개발 도구
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **ESLint / Prettier** – 코드 스타일 및 정적 분석 도구
+- **Git / GitHub** – 버전 관리 및 협업
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 아키텍처
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+현재는 로컬 상태 기반으로 동작하며 이후 Firebase를 활용한 백엔드 구축을 계획 중
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![web](https://github.com/user-attachments/assets/8439510a-451a-49f2-b09e-cd3320825ee9)
+
+
+
+
+## 주요 기능
+- 캘린더, 리스트, 그리드의 세 가지 티켓 뷰 모드
+  - [x] 캘린더 뷰 개발
+  - [ ] 리스트 뷰 개발
+  - [ ] 그리드 뷰 개발
+  - [x] drawer 구현 
+- 티켓을 추가 기능 (직접 기록하는 방식, 지류 티켓 스캔 및 예매 내역 스크랩 방식을 제공)
+- 수집한 티켓 표출 시 필터링 기능
+- 사용자와의 상호작용 수집 및 분석 지표 표출
+- 개인화된 맞춤 작품 정보 추천
+
+## 데모
+
+> 기능 구현 중입니다. 추후 GIF 또는 링크 추가 예정
+
+## 기여자
+
+- [@kyeongheehong](https://github.com/codehkh)
+
+
